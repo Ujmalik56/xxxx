@@ -2,7 +2,7 @@
   "name": "redirect-app",
   "version": "1.0.0",
   "scripts": {
-    "dev": "vercel dev",
-    "build": "echo 'Building...'"
+    "build": "mkdir -p public && cp index.html public/",
+    "dev": "vercel dev"
   }
 }
