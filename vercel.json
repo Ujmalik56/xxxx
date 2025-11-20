@@ -11,6 +11,4 @@
       "src": "/(.*)",
       "dest": "/api/redirect.js"
     }
-  ],
-  "regions": ["bom1"]
 }
