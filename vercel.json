@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "redirects": [
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "https://yt.webbloggin.online/nevir/",
-      "permanent": true,
-      "headers": {
-        "Cache-Control": "public, max-age=86400"
-      }
+      "src": "api/redirect.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/api/redirect.js"
     }
   ]
 }
