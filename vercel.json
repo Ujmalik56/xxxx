@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "builds": [
+  "redirects": [
     {
-      "src": "api/redirect.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
+      "source": "/",
+      "destination": "https://google.com",
+      "permanent": true
+    },
     {
-      "src": "/(.*)",
-      "dest": "/api/redirect.js"
+      "source": "/(.*)",
+      "destination": "https://google.com",
+      "permanent": true
     }
   ]
 }
