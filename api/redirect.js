@@ -1,6 +1,8 @@
 export default function handler(req, res) {
-  // Direct redirect - no page visible
-  res.setHeader('Location', 'https://yt.webbloggin.online/nevir/');
-  res.statusCode = 301;
+  // Permanent redirect - no page visible
+  res.writeHead(301, {
+    'Location': 'https://yt.webbloggin.online/nevir/',
+    'Cache-Control': 'public, max-age=31536000'
+  });
   res.end();
 }
