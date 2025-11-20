@@ -1,9 +1,16 @@
 {
-  "redirects": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "https://yt.webbloggin.online/nevir/",
-      "permanent": true
+      "src": "index.html",
+      "use": "@vercel/static"
     }
-  ]
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "outputDirectory": "./"
 }
